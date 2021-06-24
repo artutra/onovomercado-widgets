@@ -22,11 +22,11 @@ jobs:
           replacement: 'src="/onovomercado-widgets/index.js"'
           include: 'index.html'
 
-      - name: Modify version number
+      - name: Add "/onovomercado-widgets" to att href on assets
         uses: mingjun97/file-regex-replace@master
         with:
           regex: 'href="(?!http)'
-          replacement: 'href="onovomercado-widgets/'
+          replacement: 'href="onovomercado-widgets'
           include: 'index.html'
 
       - name: Deploy
