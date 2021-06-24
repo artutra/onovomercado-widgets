@@ -15,13 +15,20 @@ jobs:
       - name: Build Mint
         run: cd workspace && mint build
 
-      - name: Find and Replace
+      - name: Add "/onovomercado-widgets" to att src on script
         uses: jacobtomlinson/gha-find-replace@master
         with:
           find: 'src="/index.js"'
           replace: 'src="/onovomercado-widgets/index.js"'
           include: 'index.html'
-          
+
+      - name: Add "/onovomercado-widgets" to assets
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: 'href="(?!http)'
+          replace: 'href="onovomercado-widgets/'
+          include: 'index.html'
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/master'
