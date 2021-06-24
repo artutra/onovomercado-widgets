@@ -16,17 +16,17 @@ jobs:
         run: cd workspace && mint build
 
       - name: Add "/onovomercado-widgets" to att src on script
-        uses: jacobtomlinson/gha-find-replace@master
+        uses: mingjun97/file-regex-replace
         with:
-          find: 'src="/index.js"'
-          replace: 'src="/onovomercado-widgets/index.js"'
+          regex: 'src="/index.js"'
+          replacement: 'src="/onovomercado-widgets/index.js"'
           include: 'index.html'
 
-      - name: Add "/onovomercado-widgets" to assets
-        uses: jacobtomlinson/gha-find-replace@master
+      - name: Modify version number
+        uses: mingjun97/file-regex-replace
         with:
-          find: 'href="(?!http)'
-          replace: 'href="onovomercado-widgets/'
+          regex: 'href="(?!http)'
+          replacement: 'href="onovomercado-widgets/'
           include: 'index.html'
 
       - name: Deploy
