@@ -20,7 +20,7 @@ jobs:
         with:
           find: 'src="index.js"'
           replace: 'src="onovomercado-widgets/index.js"'
-          include: 'index.html'
+          include: '*.html'
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
