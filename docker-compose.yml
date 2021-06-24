@@ -1,0 +1,9 @@
+version: "2.4"
+services:
+  mint:
+    image: mintlang/mint:latest
+    working_dir: /opt/mint
+    volumes:
+      - ./workspace:/opt/mint
+    ports:
+      - 3000:3000
