@@ -26,7 +26,7 @@ jobs:
         uses: mingjun97/file-regex-replace@master
         with:
           regex: 'href="(?!http)'
-          replacement: 'href="onovomercado-widgets'
+          replacement: 'href="/onovomercado-widgets'
           include: 'index.html'
 
       - name: Deploy
