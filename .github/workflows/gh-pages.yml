@@ -16,7 +16,7 @@ jobs:
         run: cd workspace && mint build
 
       - name: Add 'onovomercado-widgets/' to index.html URLs 
-        uses: mingjun97/file-regex-replace
+        uses: mingjun97/file-regex-replace@master
         with:
           regex: 'src="index.js"'
           replacement: 'src="onovomercado-widgets/index.js"'
