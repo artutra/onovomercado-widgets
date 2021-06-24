@@ -15,16 +15,12 @@ jobs:
       - name: Build Mint
         run: cd workspace && mint build
 
-      - name: Add 'onovomercado-widgets/' to index.html URLs 
-        uses: mingjun97/file-regex-replace@master
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@master
         with:
-          regex: 'src="index.js"'
-          replacement: 'src="onovomercado-widgets/index.js"'
-          flags: "g"                  # Optional, defaults to "g"
-          include: 'workspace/dist/index.html'    # Optional, defaults to ".*"
-          exclude: '.^'               # Optional, defaults to '.^'
-          encoding: 'utf8'            # Optional, defaults to 'utf8'
-          path: '.'                   # Optional, defaults to '.'
+          find: 'src="index.js"'
+          replace: 'src="onovomercado-widgets/index.js"'
+          include: 'workspace/dist/index.html'
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
