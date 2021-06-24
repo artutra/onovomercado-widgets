@@ -11,11 +11,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-
-      - name: Setup Mint
       - uses: fabasoad/setup-mint-action@main
-
-      - name: Build
+      - name: Build Mint
         run: mint build
 
       - name: Deploy
