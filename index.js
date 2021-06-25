@@ -4,7 +4,7 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
   const mint = Mint(_enums)
 
   const _normalizeEvent = function (event) {
-    return AK.y(mint.normalizeEvent(event))
+    return AM.ad(mint.normalizeEvent(event))
   };
 
   const _R = mint.createRecord;
@@ -45,10 +45,10 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
   }
 
   const _s = (item, callback) => {
-    if (item instanceof AL) {
+    if (item instanceof AO) {
       return item
-    } else if (item instanceof AM) {
-      return new AM(callback(item._0))
+    } else if (item instanceof AP) {
+      return new AP(callback(item._0))
     } else {
       return callback(item)
     }
@@ -56,97 +56,73 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
 
   class DoError extends Error {}
 
-  class AL extends _E{constructor(){super();this.length = 0}};class AM extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AN extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AO extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AI extends _E{constructor(){super();this.length = 0}};class AJ extends _E{constructor(){super();this.length = 0}};const B = _R({});const C = _R({});const D = _R({});const E = _R({});const F = _R({});const G = _R({});const H = _R({});const I = _R({});const J = _R({});const K = _R({});const L = _R({});const M = _R({});const N = _R({});const O = _R({});const P = _R({});const Q = _R({});const R = _R({hostname:["hostname",Decoder.string],protocol:["protocol",Decoder.string],origin:["origin",Decoder.string],search:["search",Decoder.string],path:["path",Decoder.string],hash:["hash",Decoder.string],host:["host",Decoder.string],port:["port",Decoder.string]});const S = _R({});const T = _R({});const U = _R({status:["status",Decoder.number],body:["body",Decoder.string]});const V = _R({});const W = _R({caseInsensitive:["caseInsensitive",Decoder.boolean],multiline:["multiline",Decoder.boolean],unicode:["unicode",Decoder.boolean],global:["global",Decoder.boolean],sticky:["sticky",Decoder.boolean]});const X = _R({submatches:["submatches",Decoder.array(Decoder.string),Encoder.array()],match:["match",Decoder.string],index:["index",Decoder.number]});const Y = _R({height:["height",Decoder.number],bottom:["bottom",Decoder.number],width:["width",Decoder.number],right:["right",Decoder.number],left:["left",Decoder.number],top:["top",Decoder.number],x:["x",Decoder.number],y:["y",Decoder.number]});const Z = _R({});const AA = _R({});const AB = _R({});const AC = _R({});const AG=new(class extends _M{c(x,w){return (w.map(x))}});const AK=new(class extends _M{y(z){return new AA({bubbles:(z.bubbles),cancelable:(z.cancelable),currentTarget:(z.currentTarget),defaultPrevented:(z.defaultPrevented),dataTransfer:(z.dataTransfer),clipboardData:(z.clipboardData),eventPhase:(z.eventPhase),isTrusted:(z.isTrusted),target:(z.target),timeStamp:(z.timeStamp),type:(z.type),data:(z.data),altKey:(z.altKey),charCode:(z.charCode),ctrlKey:(z.ctrlKey),key:(z.key),keyCode:(z.keyCode),locale:(z.locale),location:(z.location),metaKey:(z.metaKey),repeat:(z.repeat),shiftKey:(z.shiftKey),which:(z.which),button:(z.button),buttons:(z.buttons),clientX:(z.clientX),clientY:(z.clientY),pageX:(z.pageX),pageY:(z.pageY),screenX:(z.screenX),screenY:(z.screenY),detail:(z.detail),deltaMode:(z.deltaMode),deltaX:(z.deltaX),deltaY:(z.deltaY),deltaZ:(z.deltaZ),animationName:(z.animationName),pseudoElement:(z.pseudoElement),propertyName:(z.propertyName),elapsedTime:(z.elapsedTime),event:z})}});class AD extends _C{constructor(props){super(props);this._d({a:[null,null]})}render(){return _h("p", {className:`a`}, [`Edit `,_h("code", {className:`b`}, [this.a]),` and save to reload.`])}};;class AE extends _C{render(){return _h("div", {className:`c`}, [$a()])}};;class A extends _C{get k(){return AF.n;}get m(){return AF.o;}l (...params) { return AF.p(...params); }componentWillUnmount(){AF._unsubscribe(this)}componentDidMount(){AF._subscribe(this)}b(g){return ((..._) => AG.c(((d)=>{return _h(AH, {e:d.time,f:d.type})}), ..._))(g)}h(i){return (()=>{let j = i;if(j instanceof AI){return `Livre`} else if(j instanceof AJ){return `Necessidade`}})()}render(){return _h("div", {className:`d`}, [$b(),this.h(this.k),_h("button", {"onClick":(event => ((()=>{return this.l(new AI())}))(_normalizeEvent(event)))}, [`livre`]),_h("button", {"onClick":(event => ((()=>{return this.l(new AJ())}))(_normalizeEvent(event)))}, [`necessidade`]),$c(),this.b(this.m)])}};;class AH extends _C{constructor(props){super(props);this._d({e:[null,null],f:[null,null]})}get t(){return AF.n;}get u(){return AF.o;}r (...params) { return AF.v(...params); }componentWillUnmount(){AF._unsubscribe(this)}componentDidMount(){AF._subscribe(this)}q(){return this.r(this.e)}render(){return (()=>{let s = this.f;if(s instanceof AI){return _h("div", {"onClick":(event => (this.q)(_normalizeEvent(event))),className:`e`})} else if(s instanceof AJ){return _h("div", {"onClick":(event => (this.q)(_normalizeEvent(event))),className:`f`})}})()}};;const $a=_m(() => _h('svg', { width: '220', height: '181.5', viewBox: '0 0 250 165', dangerouslySetInnerHTML: { __html: `<defs>
-  <linearGradient id="b">
-    <stop offset="0" stop-color="#5639c1"/>
-    <stop offset="1" stop-color="#f80eb3"/>
-  </linearGradient>
-  <linearGradient id="a">
-    <stop offset="0" stop-color="#5639c1"/>
-    <stop offset="1" stop-color="#f80eb3"/>
-  </linearGradient>
-  <linearGradient gradientTransform="translate(5.657 -.005)" gradientUnits="userSpaceOnUse" id="d" x1="-5.657" x2="211.343" href="#b" y1="82.505" y2="82.505"/>
-  <linearGradient id="c" x1="-5.657" x2="211.343" y1="82.505" y2="82.505" gradientTransform="translate(5.657 -.005)" gradientUnits="userSpaceOnUse" href="#a"/>
-</defs><path fill="url(#c)" d="M245.943 41.45c-24.16 5.78-44.026 6.067-61.218 3.597-10.998 13.44-17.726 26.944-23.33 40.224 23.39-6.552 46.394-15.233 65.388-26.583-20.51 15.128-44.225 25.725-68.123 33.277-8.739 21.96-15.512 43.564-34.771 60.285l-2.252 1.953c28.048-9.77 76.975-36.416 124.306-112.754z"/><path fill="url(#d)" d="M30.552 33.567c-49.954 36.431-27.206 95.236-11.548 81.492 25.592-22.14 64.03-76.108 137.652-95.465-66.83 18.181-113.972 81.988-126.349 98.033-12.377 16.044 1.958 42.386 31.297 46.488 29.339 4.103 45.808-6.826 57.697-17.147l.004.002c38.478-33.408 23.43-90.436 97.695-139.7C94.163-17.025 39.84 26.794 30.552 33.568z"/>` }}));const $b=_m(() => _h(AE, {}));const $c=_m(() => _h(AD, {a:`source/Main.mint`}));const AF=new(class extends _S{constructor(){super();this.state={n:new AI(),o:[new AC({time:`11`,type:new AI()}), new AC({time:`12`,type:new AI()})]}}get n(){return this.state.n;}get o(){return this.state.o;}v(ab){return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({o:((..._) => AG.c(((aa)=>{return (_compare(aa.time, ab) ? new AC({time:aa.time,type:this.n}) : aa)}), ..._))(this.o)})), _resolve)
-}))}p(ac){return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({n:ac})), _resolve)
+  class AO extends _E{constructor(){super();this.length = 0}};class AP extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AQ extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AR extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AH extends _E{constructor(){super();this.length = 0}};class AI extends _E{constructor(){super();this.length = 0}};class AJ extends _E{constructor(){super();this.length = 0}};class AK extends _E{constructor(){super();this.length = 0}};class AL extends _E{constructor(){super();this.length = 0}};const B = _R({});const C = _R({});const D = _R({});const E = _R({});const F = _R({});const G = _R({});const H = _R({});const I = _R({});const J = _R({});const K = _R({});const L = _R({});const M = _R({});const N = _R({});const O = _R({});const P = _R({});const Q = _R({});const R = _R({hostname:["hostname",Decoder.string],protocol:["protocol",Decoder.string],origin:["origin",Decoder.string],search:["search",Decoder.string],path:["path",Decoder.string],hash:["hash",Decoder.string],host:["host",Decoder.string],port:["port",Decoder.string]});const S = _R({});const T = _R({});const U = _R({status:["status",Decoder.number],body:["body",Decoder.string]});const V = _R({});const W = _R({caseInsensitive:["caseInsensitive",Decoder.boolean],multiline:["multiline",Decoder.boolean],unicode:["unicode",Decoder.boolean],global:["global",Decoder.boolean],sticky:["sticky",Decoder.boolean]});const X = _R({submatches:["submatches",Decoder.array(Decoder.string),Encoder.array()],match:["match",Decoder.string],index:["index",Decoder.number]});const Y = _R({height:["height",Decoder.number],bottom:["bottom",Decoder.number],width:["width",Decoder.number],right:["right",Decoder.number],left:["left",Decoder.number],top:["top",Decoder.number],x:["x",Decoder.number],y:["y",Decoder.number]});const Z = _R({});const AA = _R({});const AB = _R({});const AC = _R({});const AE=new(class extends _M{b(ac,ab){return (ab.map(ac))}});const AM=new(class extends _M{ad(ae){return new AA({bubbles:(ae.bubbles),cancelable:(ae.cancelable),currentTarget:(ae.currentTarget),defaultPrevented:(ae.defaultPrevented),dataTransfer:(ae.dataTransfer),clipboardData:(ae.clipboardData),eventPhase:(ae.eventPhase),isTrusted:(ae.isTrusted),target:(ae.target),timeStamp:(ae.timeStamp),type:(ae.type),data:(ae.data),altKey:(ae.altKey),charCode:(ae.charCode),ctrlKey:(ae.ctrlKey),key:(ae.key),keyCode:(ae.keyCode),locale:(ae.locale),location:(ae.location),metaKey:(ae.metaKey),repeat:(ae.repeat),shiftKey:(ae.shiftKey),which:(ae.which),button:(ae.button),buttons:(ae.buttons),clientX:(ae.clientX),clientY:(ae.clientY),pageX:(ae.pageX),pageY:(ae.pageY),screenX:(ae.screenX),screenY:(ae.screenY),detail:(ae.detail),deltaMode:(ae.deltaMode),deltaX:(ae.deltaX),deltaY:(ae.deltaY),deltaZ:(ae.deltaZ),animationName:(ae.animationName),pseudoElement:(ae.pseudoElement),propertyName:(ae.propertyName),elapsedTime:(ae.elapsedTime),event:ae})}});const AN=new(class extends _M{constructor(){super();this._d({af:(()=>{return [new AC({time:`00:00`,type:new AL()}), new AC({time:`00:30`,type:new AL()}), new AC({time:`01:00`,type:new AL()}), new AC({time:`01:30`,type:new AL()}), new AC({time:`02:00`,type:new AL()}), new AC({time:`02:30`,type:new AL()}), new AC({time:`03:00`,type:new AL()}), new AC({time:`03:30`,type:new AL()}), new AC({time:`04:00`,type:new AL()}), new AC({time:`04:30`,type:new AL()}), new AC({time:`05:00`,type:new AL()}), new AC({time:`05:30`,type:new AL()}), new AC({time:`06:00`,type:new AL()}), new AC({time:`06:30`,type:new AL()}), new AC({time:`07:00`,type:new AL()}), new AC({time:`07:30`,type:new AL()}), new AC({time:`08:00`,type:new AL()}), new AC({time:`08:30`,type:new AL()}), new AC({time:`09:00`,type:new AL()}), new AC({time:`09:30`,type:new AL()}), new AC({time:`10:00`,type:new AL()}), new AC({time:`10:30`,type:new AL()}), new AC({time:`11:00`,type:new AL()}), new AC({time:`11:30`,type:new AL()}), new AC({time:`12:00`,type:new AL()}), new AC({time:`12:30`,type:new AL()}), new AC({time:`13:00`,type:new AL()}), new AC({time:`13:30`,type:new AL()}), new AC({time:`14:00`,type:new AL()}), new AC({time:`14:30`,type:new AL()}), new AC({time:`15:00`,type:new AL()}), new AC({time:`15:30`,type:new AL()}), new AC({time:`16:00`,type:new AL()}), new AC({time:`16:30`,type:new AL()}), new AC({time:`17:00`,type:new AL()}), new AC({time:`17:30`,type:new AL()}), new AC({time:`18:00`,type:new AL()}), new AC({time:`18:30`,type:new AL()}), new AC({time:`19:00`,type:new AL()}), new AC({time:`19:30`,type:new AL()}), new AC({time:`20:00`,type:new AL()}), new AC({time:`20:30`,type:new AL()}), new AC({time:`21:00`,type:new AL()}), new AC({time:`21:30`,type:new AL()}), new AC({time:`22:00`,type:new AL()}), new AC({time:`22:30`,type:new AL()}), new AC({time:`23:00`,type:new AL()}), new AC({time:`23:30`,type:new AL()})]})})}});class A extends _C{get o(){return AD.q;}get p(){return AD.r;}k (...params) { return AD.s(...params); }componentWillUnmount(){AD._unsubscribe(this)}componentDidMount(){AD._subscribe(this)}a(f){return ((..._) => AE.b(((c)=>{return _h(AF, {d:c.time,e:c.type})}), ..._))(f)}g(l){return ((..._) => AE.b(((h)=>{return _h("button", {"onClick":(event => ((()=>{return this.k(h)}))(_normalizeEvent(event)))}, [_h(AG, {i:h}),this.j(h)])}), ..._))(l)}j(m){return (()=>{let n = m;if(n instanceof AH){return `Dormir`} else if(n instanceof AI){return `Comer`} else if(n instanceof AJ){return `Trabalhar`} else if(n instanceof AK){return `Necessidades`} else if(n instanceof AL){return `Tempo Livre`}})()}render(){return _h("div", {className:`a`}, [this.j(this.o),_h("div", {className:`b`}, [this.g([new AH(), new AI(), new AJ(), new AK(), new AL()])]),_h("div", {className:`c`}, [this.a(this.p)])])}};;class AF extends _C{constructor(props){super(props);this._d({d:[null,null],e:[null,null]})}get v(){return AD.q;}get w(){return AD.r;}u (...params) { return AD.x(...params); }componentWillUnmount(){AD._unsubscribe(this)}componentDidMount(){AD._subscribe(this)}t(){return this.u(this.d)}render(){return _h("div", {className:`e`}, [_h("div", {className:`g`}),_h("div", {"onClick":(event => (this.t)(_normalizeEvent(event))),className:`d`}, [_h("p", {className:`f`}, [this.d]),_h(AG, {i:this.e})])])}};;class AG extends _C{constructor(props){super(props);this._d({i:[null,null]})}$h(){const _={[`--a-a`]:this.y(this.i)};return _}y(z){return (()=>{let aa = z;if(aa instanceof AH){return `purple`} else if(aa instanceof AI){return `red`} else if(aa instanceof AJ){return `blue`} else if(aa instanceof AK){return `yellow`} else if(aa instanceof AL){return `green`}})()}render(){return _h("div", {className:`h`,style:_style([this.$h()])})}};;const AD=new(class extends _S{constructor(){super();this.state={q:new AL(),r:AN.af}}get q(){return this.state.q;}get r(){return this.state.r;}x(ah){return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({r:((..._) => AE.b(((ag)=>{return (_compare(ag.time, ah) ? new AC({time:ag.time,type:this.q}) : ag)}), ..._))(this.r)})), _resolve)
+}))}s(ai){return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({q:ai})), _resolve)
 }))}});_insertStyles(`
 .a {
-  font-size: calc(10px + 2vmin);
-  color: #939DB0;
-}
-
-.b {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-  font-style: italic;
-  font-weight: 100;
-  color: #E06C75;
-}
-
-.c svg {
-  animation: shake 2s infinite ease-in-out;
-  animation-delay: 1s;
-}
-
-.d {
   justify-content: center;
   flex-direction: column;
   align-items: center;
   display: flex;
-  background-color: #282C34;
-  height: 100vh;
-  width: 100vw;
   font-family: Open Sans;
   font-weight: bold;
 }
 
+.b {
+  display: flex;
+}
+
+.c {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.d {
+  position: relative;
+  padding: 10px;
+  border-left-width: 2px;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-right-width: 0px;
+  border-style: solid;
+  border-color: #e7004c;
+}
+
 .e {
-  background: red;
-  width: 100px;
-  height: 100px;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 .f {
-  background: blue;
-  width: 100px;
-  height: 100px;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: -60px;
+  left: -20px;
 }
 
-@keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
+.g {
+  padding-top: 30px;
+  border-left: 2px solid #e7004c;
+}
 
-  3% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-
-  6% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-
-  9% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-
-  12% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-
-  15% {
-    transform: translate(0px, 0px) rotate(-1deg);
-  }
+.h {
+  background: var(--a-a);
+  width: 60px;
+  height: 60px;
 }
 `)
 
-  const Nothing = AL
-  const Just = AM
-  const Err = AN
-  const Ok = AO
+  const Nothing = AO
+  const Just = AP
+  const Err = AQ
+  const Ok = AR
 
-  _enums.nothing = AL
-  _enums.just = AM
-  _enums.err = AN
-  _enums.ok = AO
+  _enums.nothing = AO
+  _enums.just = AP
+  _enums.err = AQ
+  _enums.ok = AR
 
   
 _program.render(A, {})
