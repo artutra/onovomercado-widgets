@@ -1,17 +1,7 @@
 store SquareStore {
   state selectedType : SquareType = SquareType::Free
 
-  state squares : Array(SquareCell) =
-    [
-      {
-        time = "11",
-        type = SquareType::Free
-      },
-      {
-        time = "12",
-        type = SquareType::Free
-      }
-    ]
+  state squares : Array(SquareCell) = SquareConstants:INIT
 
   fun toggleSquare (selectedTime : String) {
     next
@@ -50,11 +40,18 @@ component Main {
     flex-direction: column;
     align-items: center;
     display: flex;
-    background-color: #282C34;
-    height: 100vh;
-    width: 100vw;
     font-family: Open Sans;
     font-weight: bold;
+  }
+
+  style buttonsContainer {
+    display: flex;
+  }
+
+  style squaresContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   fun renderSquares (squares : Array(SquareCell)) : Array(Html) {
@@ -67,28 +64,47 @@ component Main {
       })
   }
 
+  fun renderButtons (allTypes : Array(SquareType)) {
+    allTypes
+    |> Array.map(
+      (type : SquareType) : Html {
+        <button onClick={() { setSelectedType(type) }}>
+          <ColoredSquare type={type}/>
+          <{ typeToString(type) }>
+        </button>
+      })
+  }
+
   fun typeToString (type : SquareType) {
     case (type) {
-      SquareType::Free => "Livre"
-      SquareType::Necessity => "Necessidade"
+      SquareType::Sleep => "Dormir"
+      SquareType::Eat => "Comer"
+      SquareType::Work => "Trabalhar"
+      SquareType::Necessity => "Necessidades"
+      SquareType::Free => "Tempo Livre"
     }
   }
 
   fun render : Html {
     <div::app>
-      <Logo/>
       <{ typeToString(selectedType) }>
 
-      <button onClick={() { setSelectedType(SquareType::Free) }}>
-        "livre"
-      </button>
+      <div::buttonsContainer>
+        <{
+          renderButtons(
+            [
+              SquareType::Sleep,
+              SquareType::Eat,
+              SquareType::Work,
+              SquareType::Necessity,
+              SquareType::Free
+            ])
+        }>
+      </div>
 
-      <button onClick={() { setSelectedType(SquareType::Necessity) }}>
-        "necessidade"
-      </button>
-
-      <Info mainPath="source/Main.mint"/>
-      <{ renderSquares(squares) }>
+      <div::squaresContainer>
+        <{ renderSquares(squares) }>
+      </div>
     </div>
   }
 }
