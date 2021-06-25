@@ -1,6 +1,5 @@
 store SquareStore {
   state selectedType : SquareType = SquareType::Free
-
   state squares : Array(SquareCell) = SquareConstants:INIT
 
   fun toggleSquare (selectedTime : String) {
@@ -46,6 +45,7 @@ component Main {
 
   style buttonsContainer {
     display: flex;
+    flex-wrap: wrap;
   }
 
   style squaresContainer {

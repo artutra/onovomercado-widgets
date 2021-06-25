@@ -14,17 +14,24 @@ component Square {
   style container {
     position: relative;
     padding: 10px;
-    border-left-width: 2px;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    border-right-width: 0px;
-    border-style: solid;
-    border-color: #e7004c;
+    margin-right: -2px;
+  }
+
+  style outline {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid #e7004c;
   }
 
   style spacing {
     padding-top: 30px;
     padding-bottom: 20px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
   }
 
   style time {
@@ -44,16 +51,31 @@ component Square {
     toggleSquare(time)
   }
 
+  fun onMouseOver (e : Html.Event) : Promise(Never, Void) {
+    if (e.buttons == 1 || e.type == "touchmove") {
+      toggleSquare(time)
+    } else {
+      Promise.never()
+    }
+  }
+
   fun render : Html {
     <div::spacing>
       <div::line/>
 
-      <div::container onClick={onClick}>
+      <div::container
+        onMouseOver={onMouseOver}
+        onMouseDown={onClick}
+        onTouchStart={onClick}
+        onTouchEnd={onClick}>
+
         <p::time>
           <{ time }>
         </p>
 
+        <div::outline/>
         <ColoredSquare type={type}/>
+
       </div>
     </div>
   }
