@@ -46,12 +46,16 @@ component Main {
   style buttonsContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    margin-bottom: 40px;
   }
 
   style squaresContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-left: 20px;
   }
 
   fun renderSquares (squares : Array(SquareCell)) : Array(Html) {
@@ -68,27 +72,14 @@ component Main {
     allTypes
     |> Array.map(
       (type : SquareType) : Html {
-        <button onClick={() { setSelectedType(type) }}>
-          <ColoredSquare type={type}/>
-          <{ typeToString(type) }>
-        </button>
+        <SelectButton
+          type={type}
+          active={selectedType == type}/>
       })
-  }
-
-  fun typeToString (type : SquareType) {
-    case (type) {
-      SquareType::Sleep => "Dormir"
-      SquareType::Eat => "Comer"
-      SquareType::Work => "Trabalhar"
-      SquareType::Necessity => "Necessidades"
-      SquareType::Free => "Tempo Livre"
-    }
   }
 
   fun render : Html {
     <div::app>
-      <{ typeToString(selectedType) }>
-
       <div::buttonsContainer>
         <{
           renderButtons(
@@ -106,5 +97,58 @@ component Main {
         <{ renderSquares(squares) }>
       </div>
     </div>
+  }
+}
+
+component SelectButton {
+  connect SquareStore exposing { setSelectedType }
+  property active : Bool
+  property type : SquareType
+
+  style selectButton {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 6px;
+
+    &:hover {
+      background: #{Colors:GRAY_100};
+    }
+
+    if (active) {
+      border: #0000005c 2px solid;
+    } else {
+
+    }
+
+    p {
+      margin-left: 10px;
+    }
+  }
+
+  fun typeToString (type : SquareType) {
+    case (type) {
+      SquareType::Sleep => "Dormir"
+      SquareType::Eat => "Comer"
+      SquareType::Work => "Trabalhar"
+      SquareType::Necessity => "Necessidades"
+      SquareType::Free => "Tempo Livre"
+    }
+  }
+
+  fun render {
+    <button::selectButton onClick={() { setSelectedType(type) }}>
+      <ColoredSquare
+        size={30}
+        type={type}/>
+
+      <p>
+        <{ typeToString(type) }>
+      </p>
+    </button>
   }
 }

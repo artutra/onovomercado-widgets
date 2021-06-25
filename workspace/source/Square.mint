@@ -10,6 +10,7 @@ component Square {
   connect SquareStore exposing { selectedType, squares, toggleSquare }
   property time : String
   property type : SquareType
+  property borderColor = Colors:RED_500
 
   style container {
     position: relative;
@@ -21,7 +22,7 @@ component Square {
     content: "";
     position: absolute;
     inset: 0;
-    border: 2px solid #e7004c;
+    border: 2px solid #{borderColor};
   }
 
   style spacing {
@@ -40,11 +41,12 @@ component Square {
     margin: 0;
     top: -60px;
     left: -20px;
+    color: Colors:GRAY_600;
   }
 
   style line {
     padding-top: 30px;
-    border-left: 2px solid #e7004c;
+    border-left: 2px solid #{borderColor};
   }
 
   fun onClick {
@@ -65,9 +67,7 @@ component Square {
 
       <div::container
         onMouseOver={onMouseOver}
-        onMouseDown={onClick}
-        onTouchStart={onClick}
-        onTouchEnd={onClick}>
+        onMouseDown={onClick}>
 
         <p::time>
           <{ time }>
@@ -83,21 +83,22 @@ component Square {
 
 component ColoredSquare {
   property type : SquareType
+  property size = 60
 
   fun squareTypeToColor (squareType : SquareType) {
     case (squareType) {
-      SquareType::Sleep => "purple"
-      SquareType::Eat => "red"
-      SquareType::Work => "blue"
-      SquareType::Necessity => "yellow"
-      SquareType::Free => "green"
+      SquareType::Sleep => Colors:PURPLE_700
+      SquareType::Eat => Colors:RED_500
+      SquareType::Work => Colors:BLUE_500
+      SquareType::Necessity => Colors:YELLOW_500
+      SquareType::Free => Colors:GREEN_500
     }
   }
 
   style square {
     background: #{squareTypeToColor(type)};
-    width: 60px;
-    height: 60px;
+    width: #{size}px;
+    height: #{size}px;
   }
 
   fun render : Html {
