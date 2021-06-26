@@ -1,34 +1,111 @@
+record SquareCell {
+  time : String,
+  type : SquareType
+}
+
+record StoredCell {
+  time : String,
+  type : String
+}
+
 store SquareStore {
   state selectedType : SquareType = SquareType::Free
   state squares : Array(SquareCell) = SquareConstants:INIT
 
+  fun initialize : Promise(Never, Void) {
+    try {
+      data =
+        Storage.Local.get("squares")
+
+      object =
+        Json.parse(data)
+        |> Maybe.toResult("")
+
+      storedSquares =
+        decode object as Array(StoredCell)
+
+      loadedSquares =
+        storedSquares
+        |> Array.map(storedCellToSquareCell)
+
+      next { squares = loadedSquares }
+    } catch Storage.Error => error {
+      next { squares = SquareConstants:INIT }
+    } catch Object.Error => error {
+      next { squares = SquareConstants:INIT }
+    } catch String => error {
+      next { squares = SquareConstants:INIT }
+    }
+  }
+
+  fun storeSquares (newSquares : Array(SquareCell)) : Promise(Never, Void) {
+    sequence {
+      storedSquares =
+        newSquares
+        |> Array.map(squareCellToStoredCell)
+
+      Storage.Local.set("squares", Json.stringify(encode storedSquares))
+      next { squares = newSquares }
+    } catch Storage.Error => error {
+      next { squares = newSquares }
+    }
+  }
+
+  fun storedCellToSquareCell (sc : StoredCell) : SquareCell {
+    {
+      time = sc.time,
+      type = stringToSquareType(sc.type)
+    }
+  }
+
+  fun squareCellToStoredCell (sc : SquareCell) : StoredCell {
+    {
+      time = sc.time,
+      type = squareTypeToString(sc.type)
+    }
+  }
+
+  fun stringToSquareType (s : String) {
+    case (s) {
+      "sleep" => SquareType::Sleep
+      "eat" => SquareType::Eat
+      "work" => SquareType::Work
+      "necessity" => SquareType::Necessity
+      "free" => SquareType::Free
+      => SquareType::Free
+    }
+  }
+
+  fun squareTypeToString (s : SquareType) {
+    case (s) {
+      SquareType::Sleep => "sleep"
+      SquareType::Eat => "eat"
+      SquareType::Work => "work"
+      SquareType::Necessity => "necessity"
+      SquareType::Free => "free"
+    }
+  }
+
   fun toggleSquare (selectedTime : String) {
-    next
-      {
-        squares =
-          squares
-          |> Array.map(
-            (s : SquareCell) : SquareCell {
-              if (s.time == selectedTime) {
-                {
-                  time = s.time,
-                  type = selectedType
-                }
-              } else {
-                s
-              }
-            })
-      }
+    try {
+      newSquares =
+        squares
+        |> Array.map(
+          (s : SquareCell) : SquareCell {
+            if (s.time == selectedTime) {
+              { s | type = selectedType }
+            } else {
+              s
+            }
+          })
+
+      storeSquares(newSquares)
+    }
   }
 
   fun setSelectedType (newSelectedType : SquareType) {
     next { selectedType = newSelectedType }
   }
-}
-
-record SquareCell {
-  time : String,
-  type : SquareType
 }
 
 component Main {
