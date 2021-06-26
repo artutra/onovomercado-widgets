@@ -38,6 +38,7 @@ component Main {
   style app {
     display: block;
     font-weight: bold;
+
     * {
       font-family: "Gilroy", sans-serif;
     }
@@ -81,10 +82,12 @@ component Main {
       font-size: 1.75rem;
       text-align: center;
       color: #{Colors:BLUE_LOGO};
+
       case (br) {
         Br::SM =>
           padding-left: 1rem;
           padding-right: 1rem;
+
         =>
       }
     }
@@ -123,8 +126,12 @@ component Main {
   style squares-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
     padding-left: 20px;
+
+    case (br) {
+      Br::SM => justify-content: center;
+      => justify-content: flex-start;
+    }
   }
 
   fun renderSquares (squares : Array(SquareCell)) : Array(Html) {
