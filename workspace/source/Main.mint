@@ -80,6 +80,13 @@ component Main {
     h1 {
       font-size: 1.75rem;
       text-align: center;
+      color: #{Colors:BLUE_LOGO};
+      case (br) {
+        Br::SM =>
+          padding-left: 1rem;
+          padding-right: 1rem;
+        =>
+      }
     }
   }
 
@@ -179,7 +186,7 @@ component SelectButton {
   style select-button {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 1rem;
     border: none;
     text-decoration: none;
     border-radius: 1rem;
@@ -202,7 +209,7 @@ component SelectButton {
     }
 
     p {
-      margin-left: 10px;
+      margin: 0 0 0 10px;
     }
   }
 

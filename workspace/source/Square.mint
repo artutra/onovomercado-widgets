@@ -24,6 +24,9 @@ component Square {
     position: absolute;
     inset: 0;
     border: 2px solid #{borderColor};
+    &:hover {
+      background: #ffffff30;
+    }
   }
 
   style spacing {
