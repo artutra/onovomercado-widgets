@@ -90,8 +90,11 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
 
 .b {
   display: block;
-  font-family: "Gilroy", sans-serif;
   font-weight: bold;
+}
+
+.b * {
+  font-family: "Gilroy", sans-serif;
 }
 
 .c {
