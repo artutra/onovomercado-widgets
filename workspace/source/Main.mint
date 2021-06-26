@@ -37,8 +37,10 @@ component Main {
 
   style app {
     display: block;
-    font-family: "Gilroy", sans-serif;
     font-weight: bold;
+    * {
+      font-family: "Gilroy", sans-serif;
+    }
   }
 
   style container {
