@@ -35,15 +35,26 @@ component Main {
   connect SquareStore exposing { selectedType, squares, setSelectedType }
 
   style app {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    font-family: Open Sans;
+    display: block;
+    font-family: "Gilroy", sans-serif;
     font-weight: bold;
   }
 
-  style buttonsContainer {
+  style container {
+    max-width: 70rem;
+    margin: auto;
+  }
+
+  style nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #{Colors:BLUE_LOGO};
+    border-bottom: 2px #{Colors:RED_LOGO} solid;
+  }
+
+  style buttons-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -51,10 +62,10 @@ component Main {
     margin-bottom: 40px;
   }
 
-  style squaresContainer {
+  style squares-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     padding-left: 20px;
   }
 
@@ -80,7 +91,12 @@ component Main {
 
   fun render : Html {
     <div::app>
-      <div::buttonsContainer>
+      <div::nav::container>
+        <Logo/>
+        <h2>"Exercício dos 48 quadrados para gestão de tempo"</h2>
+      </div>
+
+      <div::buttons-container::container>
         <{
           renderButtons(
             [
@@ -93,7 +109,7 @@ component Main {
         }>
       </div>
 
-      <div::squaresContainer>
+      <div::squares-container::container>
         <{ renderSquares(squares) }>
       </div>
     </div>
@@ -105,24 +121,29 @@ component SelectButton {
   property active : Bool
   property type : SquareType
 
-  style selectButton {
+  style select-button {
     display: flex;
     align-items: center;
     padding: 10px;
     border: none;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 1rem;
     cursor: pointer;
     margin-right: 6px;
+    color: #{Colors:BLUE_LOGO};
+    font-weight: 700;
+    font-size: 1.25rem;
+    background: white;
 
     &:hover {
       background: #{Colors:GRAY_100};
     }
 
     if (active) {
-      border: #0000005c 2px solid;
+      border: #{Colors:GRAY_300} 2px solid;
+      background: #{Colors:GRAY_100};
     } else {
-
+      border: #00000000 2px solid;
     }
 
     p {
@@ -141,7 +162,7 @@ component SelectButton {
   }
 
   fun render {
-    <button::selectButton onClick={() { setSelectedType(type) }}>
+    <button::select-button onClick={() { setSelectedType(type) }}>
       <ColoredSquare
         size={30}
         type={type}/>

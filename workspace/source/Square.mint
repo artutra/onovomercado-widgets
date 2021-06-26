@@ -16,6 +16,7 @@ component Square {
     position: relative;
     padding: 10px;
     margin-right: -2px;
+    cursor: pointer;
   }
 
   style outline {
@@ -41,7 +42,7 @@ component Square {
     margin: 0;
     top: -60px;
     left: -20px;
-    color: Colors:GRAY_600;
+    color: #{Colors:GRAY_800};
   }
 
   style line {
