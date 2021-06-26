@@ -4,7 +4,7 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
   const mint = Mint(_enums)
 
   const _normalizeEvent = function (event) {
-    return AQ.av(mint.normalizeEvent(event))
+    return AY.bj(mint.normalizeEvent(event))
   };
 
   const _R = mint.createRecord;
@@ -45,10 +45,10 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
   }
 
   const _s = (item, callback) => {
-    if (item instanceof AS) {
+    if (item instanceof BA) {
       return item
-    } else if (item instanceof AT) {
-      return new AT(callback(item._0))
+    } else if (item instanceof BB) {
+      return new BB(callback(item._0))
     } else {
       return callback(item)
     }
@@ -56,7 +56,14 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
 
   class DoError extends Error {}
 
-  class AS extends _E{constructor(){super();this.length = 0}};class AT extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AU extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AV extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AJ extends _E{constructor(){super();this.length = 0}};class AK extends _E{constructor(){super();this.length = 0}};class AL extends _E{constructor(){super();this.length = 0}};class AM extends _E{constructor(){super();this.length = 0}};class AN extends _E{constructor(){super();this.length = 0}};const B = _R({});const C = _R({});const D = _R({});const E = _R({});const F = _R({});const G = _R({});const H = _R({});const I = _R({});const J = _R({});const K = _R({});const L = _R({});const M = _R({});const N = _R({});const O = _R({});const P = _R({});const Q = _R({});const R = _R({hostname:["hostname",Decoder.string],protocol:["protocol",Decoder.string],origin:["origin",Decoder.string],search:["search",Decoder.string],path:["path",Decoder.string],hash:["hash",Decoder.string],host:["host",Decoder.string],port:["port",Decoder.string]});const S = _R({});const T = _R({});const U = _R({status:["status",Decoder.number],body:["body",Decoder.string]});const V = _R({});const W = _R({caseInsensitive:["caseInsensitive",Decoder.boolean],multiline:["multiline",Decoder.boolean],unicode:["unicode",Decoder.boolean],global:["global",Decoder.boolean],sticky:["sticky",Decoder.boolean]});const X = _R({submatches:["submatches",Decoder.array(Decoder.string),Encoder.array()],match:["match",Decoder.string],index:["index",Decoder.number]});const Y = _R({height:["height",Decoder.number],bottom:["bottom",Decoder.number],width:["width",Decoder.number],right:["right",Decoder.number],left:["left",Decoder.number],top:["top",Decoder.number],x:["x",Decoder.number],y:["y",Decoder.number]});const Z = _R({});const AA = _R({});const AB = _R({});const AC = _R({});const AG=new(class extends _M{d(au,at){return (at.map(au))}});const AQ=new(class extends _M{av(aw){return new AA({bubbles:(aw.bubbles),cancelable:(aw.cancelable),currentTarget:(aw.currentTarget),defaultPrevented:(aw.defaultPrevented),dataTransfer:(aw.dataTransfer),clipboardData:(aw.clipboardData),eventPhase:(aw.eventPhase),isTrusted:(aw.isTrusted),target:(aw.target),timeStamp:(aw.timeStamp),type:(aw.type),data:(aw.data),altKey:(aw.altKey),charCode:(aw.charCode),ctrlKey:(aw.ctrlKey),key:(aw.key),keyCode:(aw.keyCode),locale:(aw.locale),location:(aw.location),metaKey:(aw.metaKey),repeat:(aw.repeat),shiftKey:(aw.shiftKey),which:(aw.which),button:(aw.button),buttons:(aw.buttons),clientX:(aw.clientX),clientY:(aw.clientY),pageX:(aw.pageX),pageY:(aw.pageY),screenX:(aw.screenX),screenY:(aw.screenY),detail:(aw.detail),deltaMode:(aw.deltaMode),deltaX:(aw.deltaX),deltaY:(aw.deltaY),deltaZ:(aw.deltaZ),animationName:(aw.animationName),pseudoElement:(aw.pseudoElement),propertyName:(aw.propertyName),elapsedTime:(aw.elapsedTime),event:aw})}});const AP=new(class extends _M{ah(){return AP.ax(null)}ax(ay){return (Promise.resolve(ay))}});const AE=new(class extends _M{constructor(){super();this._d({ap:(()=>{return `#7e22ce`}),aq:(()=>{return `#3b82f6`}),a:(()=>{return `#1d2b36`}),as:(()=>{return `#22c55e`}),ar:(()=>{return `#eab308`}),al:(()=>{return `#ef4444`}),b:(()=>{return `#e7004c`}),t:(()=>{return `#f4f4f5`}),u:(()=>{return `#d4d4d8`}),ac:(()=>{return `#27272a`})})}});const AR=new(class extends _M{constructor(){super();this._d({az:(()=>{return [new AC({time:`00:00`,type:new AJ()}), new AC({time:`00:30`,type:new AJ()}), new AC({time:`01:00`,type:new AJ()}), new AC({time:`01:30`,type:new AJ()}), new AC({time:`02:00`,type:new AJ()}), new AC({time:`02:30`,type:new AJ()}), new AC({time:`03:00`,type:new AJ()}), new AC({time:`03:30`,type:new AJ()}), new AC({time:`04:00`,type:new AJ()}), new AC({time:`04:30`,type:new AJ()}), new AC({time:`05:00`,type:new AJ()}), new AC({time:`05:30`,type:new AJ()}), new AC({time:`06:00`,type:new AJ()}), new AC({time:`06:30`,type:new AJ()}), new AC({time:`07:00`,type:new AK()}), new AC({time:`07:30`,type:new AM()}), new AC({time:`08:00`,type:new AL()}), new AC({time:`08:30`,type:new AL()}), new AC({time:`09:00`,type:new AL()}), new AC({time:`09:30`,type:new AL()}), new AC({time:`10:00`,type:new AL()}), new AC({time:`10:30`,type:new AL()}), new AC({time:`11:00`,type:new AL()}), new AC({time:`11:30`,type:new AL()}), new AC({time:`12:00`,type:new AK()}), new AC({time:`12:30`,type:new AM()}), new AC({time:`13:00`,type:new AN()}), new AC({time:`13:30`,type:new AN()}), new AC({time:`14:00`,type:new AL()}), new AC({time:`14:30`,type:new AL()}), new AC({time:`15:00`,type:new AL()}), new AC({time:`15:30`,type:new AL()}), new AC({time:`16:00`,type:new AL()}), new AC({time:`16:30`,type:new AL()}), new AC({time:`17:00`,type:new AL()}), new AC({time:`17:30`,type:new AL()}), new AC({time:`18:00`,type:new AN()}), new AC({time:`18:30`,type:new AN()}), new AC({time:`19:00`,type:new AK()}), new AC({time:`19:30`,type:new AN()}), new AC({time:`20:00`,type:new AN()}), new AC({time:`20:30`,type:new AN()}), new AC({time:`21:00`,type:new AN()}), new AC({time:`21:30`,type:new AN()}), new AC({time:`22:00`,type:new AN()}), new AC({time:`22:30`,type:new AN()}), new AC({time:`23:00`,type:new AN()}), new AC({time:`23:30`,type:new AN()})]})})}});class AD extends _C{render(){return _h("div", {className:`a`}, [$a()])}};;class A extends _C{$d(){const _={[`--a-a`]:AE.a,[`--a-b`]:`2px ` + AE.b + ` solid`};return _}get l(){return AF.p;}get o(){return AF.q;}s (...params) { return AF.r(...params); }componentWillUnmount(){AF._unsubscribe(this)}componentDidMount(){AF._subscribe(this)}c(h){return ((..._) => AG.d(((e)=>{return _h(AH, {f:e.time,g:e.type})}), ..._))(h)}i(n){return ((..._) => AG.d(((j)=>{return _h(AI, {k:j,m:_compare(this.l, j)})}), ..._))(n)}render(){return _h("div", {className:`b`}, [_h("div", {className:`d c`,style:_style([this.$d()])}, [$b(),_h("h2", {}, [`Exercício dos 48 quadrados para gestão de tempo`])]),_h("div", {className:`e c`}, [this.i([new AJ(), new AK(), new AL(), new AM(), new AN()])]),_h("div", {className:`f c`}, [this.c(this.o)])])}};;class AI extends _C{constructor(props){super(props);this._d({m:[null,null],k:[null,null]})}$g(){const _={[`--b-a`]:AE.a,[`--c-a`]:AE.t};(this.m ? Object.assign(_, {[`--b-b`]:AE.u + ` 2px solid`,[`--b-c`]:AE.t}) : Object.assign(_, {[`--b-b`]:`#00000000 2px solid`}));return _}aa (...params) { return AF.r(...params); }componentWillUnmount(){AF._unsubscribe(this)}componentDidMount(){AF._subscribe(this)}v(w){return (()=>{let x = w;if(x instanceof AJ){return `Dormir`} else if(x instanceof AK){return `Comer`} else if(x instanceof AL){return `Trabalhar`} else if(x instanceof AM){return `Necessidades`} else if(x instanceof AN){return `Tempo Livre`}})()}render(){return _h("button", {"onClick":(event => ((()=>{return this.aa(this.k)}))(_normalizeEvent(event))),className:`g`,style:_style([this.$g()])}, [_h(AO, {y:30,z:this.k}),_h("p", {}, [this.v(this.k)])])}};;class AH extends _C{constructor(props){super(props);this._d({f:[null,null],g:[null,null],ab:[null,AE.al]})}$i(){const _={[`--d-a`]:`2px solid ` + this.ab};return _}$k(){const _={[`--e-a`]:AE.ac};return _}$l(){const _={[`--f-a`]:`2px solid ` + this.ab};return _}get ai(){return AF.p;}get aj(){return AF.q;}ae (...params) { return AF.ak(...params); }componentWillUnmount(){AF._unsubscribe(this)}componentDidMount(){AF._subscribe(this)}ad(){return this.ae(this.f)}af(ag){return (_compare(ag.buttons, 1) || _compare(ag.type, `touchmove`) ? this.ae(this.f) : AP.ah())}render(){return _h("div", {className:`j`}, [_h("div", {className:`l`,style:_style([this.$l()])}),_h("div", {"onMouseOver":(event => (this.af)(_normalizeEvent(event))),"onMouseDown":(event => (this.ad)(_normalizeEvent(event))),className:`h`}, [_h("p", {className:`k`,style:_style([this.$k()])}, [this.f]),_h("div", {className:`i`,style:_style([this.$i()])}),_h(AO, {z:this.g})])])}};;class AO extends _C{constructor(props){super(props);this._d({z:[null,null],y:[null,60]})}$m(){const _={[`--g-a`]:this.am(this.z),[`--g-b`]:this.y + `px`,[`--g-c`]:this.y + `px`};return _}am(an){return (()=>{let ao = an;if(ao instanceof AJ){return AE.ap} else if(ao instanceof AK){return AE.al} else if(ao instanceof AL){return AE.aq} else if(ao instanceof AM){return AE.ar} else if(ao instanceof AN){return AE.as}})()}render(){return _h("div", {className:`m`,style:_style([this.$m()])})}};;const $a=_m(() => _h('svg', { width: '252.795', height: '73.773', viewBox: '0 0 252.795 73.773', dangerouslySetInnerHTML: { __html: `<defs>
+  class BA extends _E{constructor(){super();this.length = 0}};class BB extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class BC extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class BD extends _E{constructor(_0){super();this._0 = _0;this.length = 1}};class AE extends _E{constructor(){super();this.length = 0}};class AG extends _E{constructor(){super();this.length = 0}};class AH extends _E{constructor(){super();this.length = 0}};class AI extends _E{constructor(){super();this.length = 0}};class AJ extends _E{constructor(){super();this.length = 0}};class AQ extends _E{constructor(){super();this.length = 0}};class AR extends _E{constructor(){super();this.length = 0}};class AS extends _E{constructor(){super();this.length = 0}};class AT extends _E{constructor(){super();this.length = 0}};class AU extends _E{constructor(){super();this.length = 0}};const B = _R({});const C = _R({});const D = _R({});const E = _R({});const F = _R({});const G = _R({});const H = _R({});const I = _R({});const J = _R({});const K = _R({});const L = _R({});const M = _R({});const N = _R({});const O = _R({});const P = _R({});const Q = _R({});const R = _R({hostname:["hostname",Decoder.string],protocol:["protocol",Decoder.string],origin:["origin",Decoder.string],search:["search",Decoder.string],path:["path",Decoder.string],hash:["hash",Decoder.string],host:["host",Decoder.string],port:["port",Decoder.string]});const S = _R({});const T = _R({});const U = _R({status:["status",Decoder.number],body:["body",Decoder.string]});const V = _R({});const W = _R({caseInsensitive:["caseInsensitive",Decoder.boolean],multiline:["multiline",Decoder.boolean],unicode:["unicode",Decoder.boolean],global:["global",Decoder.boolean],sticky:["sticky",Decoder.boolean]});const X = _R({submatches:["submatches",Decoder.array(Decoder.string),Encoder.array()],match:["match",Decoder.string],index:["index",Decoder.number]});const Y = _R({height:["height",Decoder.number],bottom:["bottom",Decoder.number],width:["width",Decoder.number],right:["right",Decoder.number],left:["left",Decoder.number],top:["top",Decoder.number],x:["x",Decoder.number],y:["y",Decoder.number]});const Z = _R({});const AA = _R({});const AB = _R({});const AC = _R({});const AX=new(class extends _M{bc(){return (window.innerWidth)}bd(bf,bg,be){return ((() => {
+      const listener = (event) => {
+        be(_normalizeEvent(event))
+      }
+
+      window.addEventListener(bf, listener, bg);
+      return () => window.removeEventListener(bf, listener, bg);
+    })())}});const AN=new(class extends _M{k(bi,bh){return (bh.map(bi))}});const AY=new(class extends _M{bj(bk){return new AA({bubbles:(bk.bubbles),cancelable:(bk.cancelable),currentTarget:(bk.currentTarget),defaultPrevented:(bk.defaultPrevented),dataTransfer:(bk.dataTransfer),clipboardData:(bk.clipboardData),eventPhase:(bk.eventPhase),isTrusted:(bk.isTrusted),target:(bk.target),timeStamp:(bk.timeStamp),type:(bk.type),data:(bk.data),altKey:(bk.altKey),charCode:(bk.charCode),ctrlKey:(bk.ctrlKey),key:(bk.key),keyCode:(bk.keyCode),locale:(bk.locale),location:(bk.location),metaKey:(bk.metaKey),repeat:(bk.repeat),shiftKey:(bk.shiftKey),which:(bk.which),button:(bk.button),buttons:(bk.buttons),clientX:(bk.clientX),clientY:(bk.clientY),pageX:(bk.pageX),pageY:(bk.pageY),screenX:(bk.screenX),screenY:(bk.screenY),detail:(bk.detail),deltaMode:(bk.deltaMode),deltaX:(bk.deltaX),deltaY:(bk.deltaY),deltaZ:(bk.deltaZ),animationName:(bk.animationName),pseudoElement:(bk.pseudoElement),propertyName:(bk.propertyName),elapsedTime:(bk.elapsedTime),event:bk})}});const AW=new(class extends _M{aq(){return AW.bl(null)}bl(bm){return (Promise.resolve(bm))}});const AK=new(class extends _M{constructor(){super();this._d({ay:(()=>{return `#7e22ce`}),az:(()=>{return `#3b82f6`}),ab:(()=>{return `#1d2b36`}),bb:(()=>{return `#22c55e`}),ba:(()=>{return `#eab308`}),au:(()=>{return `#ef4444`}),h:(()=>{return `#e7004c`}),ac:(()=>{return `#f4f4f5`}),ad:(()=>{return `#d4d4d8`}),al:(()=>{return `#27272a`})})}});const AZ=new(class extends _M{constructor(){super();this._d({bn:(()=>{return [new AC({time:`00:00`,type:new AQ()}), new AC({time:`00:30`,type:new AQ()}), new AC({time:`01:00`,type:new AQ()}), new AC({time:`01:30`,type:new AQ()}), new AC({time:`02:00`,type:new AQ()}), new AC({time:`02:30`,type:new AQ()}), new AC({time:`03:00`,type:new AQ()}), new AC({time:`03:30`,type:new AQ()}), new AC({time:`04:00`,type:new AQ()}), new AC({time:`04:30`,type:new AQ()}), new AC({time:`05:00`,type:new AQ()}), new AC({time:`05:30`,type:new AQ()}), new AC({time:`06:00`,type:new AQ()}), new AC({time:`06:30`,type:new AQ()}), new AC({time:`07:00`,type:new AR()}), new AC({time:`07:30`,type:new AT()}), new AC({time:`08:00`,type:new AS()}), new AC({time:`08:30`,type:new AS()}), new AC({time:`09:00`,type:new AS()}), new AC({time:`09:30`,type:new AS()}), new AC({time:`10:00`,type:new AS()}), new AC({time:`10:30`,type:new AS()}), new AC({time:`11:00`,type:new AS()}), new AC({time:`11:30`,type:new AS()}), new AC({time:`12:00`,type:new AR()}), new AC({time:`12:30`,type:new AT()}), new AC({time:`13:00`,type:new AU()}), new AC({time:`13:30`,type:new AU()}), new AC({time:`14:00`,type:new AS()}), new AC({time:`14:30`,type:new AS()}), new AC({time:`15:00`,type:new AS()}), new AC({time:`15:30`,type:new AS()}), new AC({time:`16:00`,type:new AS()}), new AC({time:`16:30`,type:new AS()}), new AC({time:`17:00`,type:new AS()}), new AC({time:`17:30`,type:new AS()}), new AC({time:`18:00`,type:new AU()}), new AC({time:`18:30`,type:new AU()}), new AC({time:`19:00`,type:new AR()}), new AC({time:`19:30`,type:new AU()}), new AC({time:`20:00`,type:new AU()}), new AC({time:`20:30`,type:new AU()}), new AC({time:`21:00`,type:new AU()}), new AC({time:`21:30`,type:new AU()}), new AC({time:`22:00`,type:new AU()}), new AC({time:`22:30`,type:new AU()}), new AC({time:`23:00`,type:new AU()}), new AC({time:`23:30`,type:new AU()})]})})}});const AF=new(class extends _M{bo(){return (()=>{let bp = AX.bc();return (bp < 640 ? new AE() : (bp < 768 ? new AG() : (bp < 1024 ? new AH() : (bp < 1280 ? new AI() : new AJ()))))})()}constructor(){super();this._d({c:(()=>{return 640}),d:(()=>{return 768}),e:(()=>{return 1024}),f:(()=>{return 1280})})}});class AD extends _C{render(){return _h("div", {className:`a`}, [$a()])}};;class A extends _C{$c(){const _={};(()=>{let b = this.a;if(b instanceof AE){Object.assign(_, {})} else if(b instanceof AG){Object.assign(_, {[`--b-a`]:AF.c + `px`})} else if(b instanceof AH){Object.assign(_, {[`--b-a`]:AF.d + `px`})} else if(b instanceof AI){Object.assign(_, {[`--b-a`]:AF.e + `px`})} else if(b instanceof AJ){Object.assign(_, {[`--b-a`]:AF.f + `px`})}})();return _}$d(){const _={};(()=>{let g = this.a;if(g instanceof AE){Object.assign(_, {[`--c-a`]:`column`,[`--c-b`]:`center`})} else{Object.assign(_, {[`--c-a`]:`row`})}})();return _}$e(){const _={[`--a-a`]:`2px ` + AK.h + ` solid`};(()=>{let i = this.a;if(i instanceof AE){Object.assign(_, {[`--a-b`]:`0 1rem 0 1rem`})} else{Object.assign(_, {[`--a-b`]:`0`})}})();return _}get s(){return AL.w;}get v(){return AL.x;}z (...params) { return AL.y(...params); }get a(){return AM.aa;}componentWillUnmount(){AL._unsubscribe(this);AM._unsubscribe(this)}componentDidMount(){AL._subscribe(this);AM._subscribe(this)}j(o){return ((..._) => AN.k(((l)=>{return _h(AO, {m:l.time,n:l.type})}), ..._))(o)}p(u){return ((..._) => AN.k(((q)=>{return _h(AP, {r:q,t:_compare(this.s, q)})}), ..._))(u)}render(){return _h("div", {className:`b`}, [_h("div", {className:`d c`,style:_style([this.$d(), this.$c()])}, [$b(),_h("h1", {}, [`Exercício dos 48 quadrados para gestão de tempo`])]),_h("div", {className:`e c`,style:_style([this.$e(), this.$c()])}, [_h("div", {})]),_h("div", {className:`f c`,style:_style([this.$c()])}, [this.p([new AQ(), new AR(), new AS(), new AT(), new AU()])]),_h("div", {className:`g c`,style:_style([this.$c()])}, [this.j(this.v)])])}};;class AP extends _C{constructor(props){super(props);this._d({t:[null,null],r:[null,null]})}$h(){const _={[`--d-a`]:AK.ab,[`--e-a`]:AK.ac};(this.t ? Object.assign(_, {[`--d-b`]:AK.ad + ` 2px solid`,[`--d-c`]:AK.ac}) : Object.assign(_, {[`--d-b`]:`#00000000 2px solid`}));return _}aj (...params) { return AL.y(...params); }componentWillUnmount(){AL._unsubscribe(this)}componentDidMount(){AL._subscribe(this)}ae(af){return (()=>{let ag = af;if(ag instanceof AQ){return `Dormir`} else if(ag instanceof AR){return `Comer`} else if(ag instanceof AS){return `Trabalhar`} else if(ag instanceof AT){return `Necessidades`} else if(ag instanceof AU){return `Tempo Livre`}})()}render(){return _h("button", {"onClick":(event => ((()=>{return this.aj(this.r)}))(_normalizeEvent(event))),className:`h`,style:_style([this.$h()])}, [_h(AV, {ah:30,ai:this.r}),_h("p", {}, [this.ae(this.r)])])}};;class AO extends _C{constructor(props){super(props);this._d({m:[null,null],n:[null,null],ak:[null,AK.au]})}$j(){const _={[`--f-a`]:`2px solid ` + this.ak};return _}$l(){const _={[`--g-a`]:AK.al};return _}$m(){const _={[`--h-a`]:`2px solid ` + this.ak};return _}get ar(){return AL.w;}get as(){return AL.x;}an (...params) { return AL.at(...params); }componentWillUnmount(){AL._unsubscribe(this)}componentDidMount(){AL._subscribe(this)}am(){return this.an(this.m)}ao(ap){return (_compare(ap.buttons, 1) || _compare(ap.type, `touchmove`) ? this.an(this.m) : AW.aq())}render(){return _h("div", {className:`k`}, [_h("div", {className:`m`,style:_style([this.$m()])}),_h("div", {"onMouseOver":(event => (this.ao)(_normalizeEvent(event))),"onMouseDown":(event => (this.am)(_normalizeEvent(event))),className:`i`}, [_h("p", {className:`l`,style:_style([this.$l()])}, [this.m]),_h("div", {className:`j`,style:_style([this.$j()])}),_h(AV, {ai:this.n})])])}};;class AV extends _C{constructor(props){super(props);this._d({ai:[null,null],ah:[null,60]})}$n(){const _={[`--i-a`]:this.av(this.ai),[`--i-b`]:this.ah + `px`,[`--i-c`]:this.ah + `px`};return _}av(aw){return (()=>{let ax = aw;if(ax instanceof AQ){return AK.ay} else if(ax instanceof AR){return AK.au} else if(ax instanceof AS){return AK.az} else if(ax instanceof AT){return AK.ba} else if(ax instanceof AU){return AK.bb}})()}render(){return _h("div", {className:`n`,style:_style([this.$n()])})}};;const $a=_m(() => _h('svg', { width: '252.795', height: '73.773', viewBox: '0 0 252.795 73.773', dangerouslySetInnerHTML: { __html: `<defs>
   <style>.a{fill:#e7004c;}.b{fill:#1d2b36;}</style>
 </defs><g transform="translate(-0.005 0.002)">
   <path class="a" d="M52.85,16.76h0A45.065,45.065,0,0,0,38.9,14.24s-3.23-.07-3.46-.07A43.824,43.824,0,0,1,45.82,7.04L57.34,18.56C57.29,18.54,54.49,17.35,52.85,16.76Zm3.08,36.27A44.605,44.605,0,0,1,21.12,50.2c-.41-12.88,3.27-23.92,11.14-32.79a43.028,43.028,0,0,1,5.68-.31A44.185,44.185,0,0,1,55.93,53.03ZM18.26,48.55a68.272,68.272,0,0,0,.95,11.12L1.49,41.95a5.082,5.082,0,0,1,0-7.18L35.36.89a3.048,3.048,0,0,1,4.31,0l4,4a59.5,59.5,0,0,0-12.82,9.79s-1.85,2.06-2.9,3.44h0c-4.95,6.5-9.7,16.39-9.69,30.43ZM30.34,70.8l-7.52-7.52a75.316,75.316,0,0,1-1.5-9.77,47.518,47.518,0,0,0,34.54,2.57s2.18-.75,2.9-1.01,1.89-.76,2.91-1.23L44.7,70.8A10.164,10.164,0,0,1,30.34,70.8ZM73.13,42.37a43.891,43.891,0,0,1-14.34,9.6A46.969,46.969,0,0,0,42.88,17.41,43.962,43.962,0,0,1,58.5,22.36c5.17,2.51,10.51,7.79,15.08,12.43a5.085,5.085,0,0,1-.03,7.16C73.39,42.1,73.25,42.25,73.13,42.37Z"/>
@@ -72,9 +79,11 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
   <path class="b" d="M206.35,39.88v21h-5.42V58.4a8.363,8.363,0,0,1-6.85,3.07c-5.59,0-10.21-4.83-10.21-11.09s4.62-11.09,10.21-11.09a8.376,8.376,0,0,1,6.85,3.07V39.88Zm-5.42,10.5a5.821,5.821,0,1,0-11.64,0,5.821,5.821,0,1,0,11.64,0Z"/>
   <path class="b" d="M229.66,31.48v29.4h-5.42V58.4a8.164,8.164,0,0,1-6.8,3.07c-5.63,0-10.25-4.83-10.25-11.09s4.62-11.09,10.25-11.09a8.124,8.124,0,0,1,6.8,3.07V31.48Zm-5.42,18.9a5.821,5.821,0,1,0-11.64,0,5.821,5.821,0,1,0,11.64,0Z"/>
   <path class="b" d="M230.58,50.38a11.11,11.11,0,1,1,11.09,11.09A10.97,10.97,0,0,1,230.58,50.38Zm16.81,0a5.691,5.691,0,1,0-5.71,5.8A5.589,5.589,0,0,0,247.39,50.38Z"/>
-</g>` }}));const $b=_m(() => _h(AD, {}));const AF=new(class extends _S{constructor(){super();this.state={p:new AN(),q:AR.az}}get p(){return this.state.p;}get q(){return this.state.q;}ak(bb){return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({q:((..._) => AG.d(((ba)=>{return (_compare(ba.time, bb) ? new AC({time:ba.time,type:this.p}) : ba)}), ..._))(this.q)})), _resolve)
-}))}r(bc){return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({p:bc})), _resolve)
-}))}});_insertStyles(`
+</g>` }}));const $b=_m(() => _h(AD, {}));const AL=new(class extends _S{constructor(){super();this.state={w:new AU(),x:AZ.bn}}get w(){return this.state.w;}get x(){return this.state.x;}at(br){return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({x:((..._) => AN.k(((bq)=>{return (_compare(bq.time, br) ? new AC({time:bq.time,type:this.w}) : bq)}), ..._))(this.x)})), _resolve)
+}))}y(bs){return new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({w:bs})), _resolve)
+}))}});const AM=new(class extends _S{constructor(){super();this.state={aa:AF.bo(),bt:AX.bd(`resize`, false, ((bv)=>{return (()=>{let bu = AF.bo();return (!_compare(bu, this.aa) ? new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({aa:bu})), _resolve)
+})) : new Promise(((_resolve)=>{this.setState(_u(this.state, new Record({})), _resolve)
+})))})()}))}}get aa(){return this.state.aa;}get bt(){return this.state.bt;}});_insertStyles(`
 .a svg {
   height: 50px;
 }
@@ -86,20 +95,39 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
 }
 
 .c {
-  max-width: 70rem;
   margin: auto;
+  max-width: var(--b-a);
 }
 
 .d {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  color: var(--a-a);
-  border-bottom: var(--a-b);
+  align-items: var(--c-b, center);
+  padding: 1rem 0 1rem 0;
+  flex-direction: var(--c-a);
+}
+
+.d h1 {
+  font-size: 1.75rem;
+  text-align: center;
 }
 
 .e {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.e div {
+  flex: 1;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-left-width: 0;
+  border-bottom: var(--a-a);
+  margin: var(--a-b);
+}
+
+.f {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -107,51 +135,51 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
   margin-bottom: 40px;
 }
 
-.f {
+.g {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   padding-left: 20px;
 }
 
-.g {
+.h {
   display: flex;
   align-items: center;
   padding: 10px;
-  border: var(--b-b, none);
+  border: var(--d-b, none);
   text-decoration: none;
   border-radius: 1rem;
   cursor: pointer;
   margin-right: 6px;
-  color: var(--b-a);
+  color: var(--d-a);
   font-weight: 700;
   font-size: 1.25rem;
-  background: var(--b-c, white);
+  background: var(--d-c, white);
 }
 
-.g:hover {
-  background: var(--c-a);
+.h:hover {
+  background: var(--e-a);
 }
 
-.g p {
+.h p {
   margin-left: 10px;
 }
 
-.h {
+.i {
   position: relative;
   padding: 10px;
   margin-right: -2px;
   cursor: pointer;
 }
 
-.i {
+.j {
   content: "";
   position: absolute;
   inset: 0;
-  border: var(--d-a);
+  border: var(--f-a);
 }
 
-.j {
+.k {
   padding-top: 30px;
   padding-bottom: 20px;
   -webkit-user-select: none;
@@ -161,36 +189,36 @@ var Mint=function(){"use strict";var t,e,n,r,o,i,a={},s=[],u=/acit|ex(?:s|g|n|p|
   user-select: none;
 }
 
-.k {
+.l {
   position: absolute;
   padding: 0;
   margin: 0;
   top: -60px;
   left: -20px;
-  color: var(--e-a);
-}
-
-.l {
-  padding-top: 30px;
-  border-left: var(--f-a);
+  color: var(--g-a);
 }
 
 .m {
-  background: var(--g-a);
-  width: var(--g-b);
-  height: var(--g-c);
+  padding-top: 30px;
+  border-left: var(--h-a);
+}
+
+.n {
+  background: var(--i-a);
+  width: var(--i-b);
+  height: var(--i-c);
 }
 `)
 
-  const Nothing = AS
-  const Just = AT
-  const Err = AU
-  const Ok = AV
+  const Nothing = BA
+  const Just = BB
+  const Err = BC
+  const Ok = BD
 
-  _enums.nothing = AS
-  _enums.just = AT
-  _enums.err = AU
-  _enums.ok = AV
+  _enums.nothing = BA
+  _enums.just = BB
+  _enums.err = BC
+  _enums.ok = BD
 
   
 _program.render(A, {})
