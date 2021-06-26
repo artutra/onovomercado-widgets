@@ -33,6 +33,7 @@ record SquareCell {
 
 component Main {
   connect SquareStore exposing { selectedType, squares, setSelectedType }
+  connect Breakpoints exposing { br }
 
   style app {
     display: block;
@@ -41,17 +42,65 @@ component Main {
   }
 
   style container {
-    max-width: 70rem;
     margin: auto;
+
+    case (br) {
+      Br::SM =>
+
+      Br::MD =>
+        max-width: #{ScreenSize:SM}px;
+
+      Br::LG =>
+        max-width: #{ScreenSize:MD}px;
+
+      Br::XL =>
+        max-width: #{ScreenSize:LG}px;
+
+      Br::XL2 =>
+        max-width: #{ScreenSize:XL}px;
+    }
   }
 
   style nav {
+    case (br) {
+      Br::SM =>
+        flex-direction: column;
+        align-items: center;
+
+      => flex-direction: row;
+    }
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    color: #{Colors:BLUE_LOGO};
-    border-bottom: 2px #{Colors:RED_LOGO} solid;
+    padding: 1rem 0 1rem 0;
+
+    h1 {
+      font-size: 1.75rem;
+      text-align: center;
+    }
+  }
+
+  style separator {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+
+    div {
+      flex: 1;
+
+      case (br) {
+        Br::SM =>
+          margin: 0 1rem 0 1rem;
+
+        => margin: 0;
+      }
+
+      border-top-width: 0;
+      border-right-width: 0;
+      border-left-width: 0;
+      border-bottom: 2px #{Colors:RED_LOGO} solid;
+    }
   }
 
   style buttons-container {
@@ -93,7 +142,11 @@ component Main {
     <div::app>
       <div::nav::container>
         <Logo/>
-        <h2>"Exercício dos 48 quadrados para gestão de tempo"</h2>
+        <h1>"Exercício dos 48 quadrados para gestão de tempo"</h1>
+      </div>
+
+      <div::separator::container>
+        <div/>
       </div>
 
       <div::buttons-container::container>
